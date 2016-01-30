@@ -83,4 +83,4 @@ library(dplyr)
 avg_data <- aggregate(. ~Subject + Activity, UCI_data, mean)
 avg_data <- avg_data[order(avg_data$Subject, avg_data$Activity),]
 
-write.table(avg_data, file = "tidy_UCI_avg_data.txt", sep = " ", row.names = FALSE)
+write.table(avg_data, file = "tidy_UCI_avg_data.txt", sep = "\t", row.names = FALSE)
